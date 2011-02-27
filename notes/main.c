@@ -9,6 +9,7 @@
 //  Users able to change location of where the notes are stored.
 //  Features a utility to read the notes
 //  All notes date/time stamped.
+//  test comment
 
 #include <stdio.h>
 #include <sys/stat.h>
