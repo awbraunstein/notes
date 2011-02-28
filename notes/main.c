@@ -33,17 +33,14 @@ void makeNote(char *string){
 
 int main (int argc, char * argv[])
 {
-  char *p = getenv("USER");
+  char *p = getenv("HOME");
   char *loc = "/Library/Application Support/MyNotes";
-  char full[70];
-  strcpy(full, "/Users/");
   strcat(p, loc);
-  strcat(full, p);
-  if(stat(full,&st) != 0)
+  if(stat(p,&st) != 0)
   {
     printf("directory does not exist\n");
     int k;
-    k = mkdir(full,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+    k = mkdir(p,S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     printf("%d\n", k);
   }
   
